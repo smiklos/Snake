@@ -1,5 +1,4 @@
 import java.awt.GridLayout;
-import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -33,7 +32,7 @@ class Window extends JFrame{
 		// Start & pauses all threads, then adds every square of each thread to the panel
 		for(int i=0;i<width;i++){
 			for(int j=0;j<height;j++){
-				getContentPane().add(Grid.get(i).get(j).square);
+				getContentPane().add(Grid.get(i).get(j).getSquare());
 			}
 		}
 		
@@ -45,7 +44,7 @@ class Window extends JFrame{
 		c.start();
 
 		// Links the window to the keyboardlistenner.
-		this.addKeyListener((KeyListener) new KeyboardListener());
+		this.addKeyListener(new KeyboardListener());
 
 		//To do : handle multiplayers .. The above works, test it and see what happens
 		
