@@ -3,14 +3,20 @@ import java.awt.event.KeyEvent;
 
  public class KeyboardListener extends KeyAdapter{
  	
+	 public static final int RIGHT = 39;
+	 public static final int LEFT= 38;
+	 public static final int UP = 37;
+	 public static final int DOWN = 36;
+	 
+	 
  		public void keyPressed(KeyEvent e){
  		    switch(e.getKeyCode()){
-		    	case 39:	// -> Right 
+		    	case RIGHT:	// -> Right 
 		    				//if it's not the opposite direction
 		    				if(ThreadsController.directionSnake!=2) 
 		    					ThreadsController.directionSnake=1;
 		    			  	break;
-		    	case 38:	// -> Top
+		    	case LEFT:	// -> Top
 							if(ThreadsController.directionSnake!=4) 
 								ThreadsController.directionSnake=3;
 		    				break;
